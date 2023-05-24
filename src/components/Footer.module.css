@@ -1,0 +1,91 @@
+.footer {
+  background-color: var(--very-light-grey);
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  padding-top: 5.8125rem;
+  padding-bottom: 3rem;
+}
+
+.home {
+  background-color: var(--very-dark-blue);
+  width: 7.5rem;
+  height: 7.5rem;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: -3.75rem;
+  left: calc(50% - 3.75rem);
+}
+
+.home > img {
+  width: 3.625rem;
+  filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%)
+    hue-rotate(118deg) brightness(107%) contrast(110%);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.9375rem;
+}
+
+.group > .link,
+.group > .active {
+  color: var(--medium-grey);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5625rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.group > .active {
+  color: var(--very-dark-blue);
+}
+
+.button {
+  width: fit-content;
+  background-color: var(--very-dark-blue);
+  padding: 1.5625rem 2rem 1.375rem 2.3125rem;
+  text-decoration: none;
+  margin-inline: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.button > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button > div > span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+}
+
+.arrow {
+  width: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%)
+    hue-rotate(118deg) brightness(107%) contrast(110%);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--very-dark-blue);
+  }
+  .button:hover {
+    background-color: var(--dark-grey);
+  }
+}

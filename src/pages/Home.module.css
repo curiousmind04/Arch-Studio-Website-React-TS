@@ -1,0 +1,191 @@
+.one {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin-bottom: 4.5rem;
+}
+
+.one > .paramour {
+  width: 100%;
+  vertical-align: bottom;
+  filter: brightness(70%);
+}
+
+.paramourGroup {
+  width: calc(100% - 4rem);
+  position: absolute;
+  top: 7.25rem;
+  left: 2rem;
+  z-index: 1;
+}
+
+.paramourGroup h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: -1.2px;
+  margin-bottom: 0.6875rem;
+}
+
+.paramourGroup p {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 5.1875rem;
+}
+
+.button {
+  width: fit-content;
+  background-color: var(--very-dark-blue);
+  padding: 1.5625rem 2rem 1.375rem 2.3125rem;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.button > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button > div > span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+}
+
+.arrow {
+  width: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%)
+    hue-rotate(118deg) brightness(107%) contrast(110%);
+}
+
+.two,
+.four {
+  margin-inline: 2rem;
+}
+
+.line {
+  background-color: var(--light-grey);
+  width: 4.0625rem;
+  height: 1px;
+  margin-bottom: 4.25rem;
+}
+
+.two h2 {
+  color: var(--very-dark-blue);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  letter-spacing: -1.71429px;
+  margin-bottom: 1.375rem;
+}
+
+.two p {
+  color: var(--dark-grey);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.two > :last-child {
+  margin-bottom: 7.0625rem;
+}
+
+.three {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin-bottom: 4.5625rem;
+}
+
+.three > .smallTeam {
+  width: 100%;
+  vertical-align: bottom;
+  filter: brightness(70%);
+}
+
+.smallTeamGroup {
+  width: calc(100% - 4rem);
+  position: absolute;
+  top: calc(50% - 6.25rem);
+  left: 2rem;
+  z-index: 1;
+}
+
+.smallTeamGroup h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  letter-spacing: -1.71429px;
+  margin-bottom: 1.4375rem;
+}
+
+.four h2 {
+  color: var(--very-dark-blue);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  letter-spacing: -1.71429px;
+  margin-bottom: 2.6875rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15rem 15rem 15rem 4.5rem;
+  row-gap: 1.5rem;
+}
+
+.feat {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.feat > img {
+  height: 100%;
+  width: 100%;
+  filter: brightness(70%);
+  vertical-align: bottom;
+}
+
+.featGroup {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1;
+}
+
+.featGroup h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+.featGroupButton {
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+  opacity: 0.75;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid .button {
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--dark-grey);
+  }
+}

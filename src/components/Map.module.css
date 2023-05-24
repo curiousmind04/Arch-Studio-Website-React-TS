@@ -1,0 +1,10 @@
+/* styling for .leaflet-container is in index.css */
+
+.mapComponent {
+  margin-bottom: 4.5625rem;
+}
+
+.map {
+  height: 22.9375rem;
+  width: 100%;
+}
