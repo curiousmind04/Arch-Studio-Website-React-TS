@@ -2,17 +2,16 @@ import { useState } from "react";
 
 import Map from "../components/Map";
 import classes from "./Contact.module.css";
-import { LatLngExpression } from "leaflet";
 
 const ContactPage = () => {
-  const [office, setOffice] = useState<LatLngExpression | undefined>();
+  const [office, setOffice] = useState<string | undefined>();
 
   const officeHandler = (office: string) => {
     if (office === "first") {
-      setOffice([43.654815633117366, -79.38077998638532]);
+      setOffice("first");
     }
     if (office === "second") {
-      setOffice([40.74998788020167, -73.98510820790769]);
+      setOffice("second");
     }
   };
   return (

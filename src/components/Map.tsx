@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon, LatLngExpression } from "leaflet";
 
@@ -6,24 +5,12 @@ import "leaflet/dist/leaflet.css";
 import classes from "./Map.module.css";
 
 type Props = {
-  office: LatLngExpression | undefined;
+  office: string | undefined;
 };
 
 const Map: React.FC<Props> = ({ office }) => {
-  const [center, setCenter] = useState<LatLngExpression>([
-    42.53199034588999, -77.01132639826639,
-  ]);
-
-  //   const center: LatLngExpression = [42.53199034588999, -77.01132639826639];
+  const center: LatLngExpression = [42.53199034588999, -77.01132639826639];
   const zoom = 6;
-
-  useEffect(() => {
-    if (office) {
-      setCenter(office);
-    }
-  }, [office]);
-
-  console.log(center);
 
   // for mainOffice and officeTwo I used the
   // Eaton Center and the Empire State Building
@@ -40,22 +27,48 @@ const Map: React.FC<Props> = ({ office }) => {
   return (
     <section className={classes.mapComponent} id="map">
       <div className={classes.map}>
-        <MapContainer
-          center={center}
-          zoom={office ? 16 : zoom}
-          scrollWheelZoom={true}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={mainOffice} icon={customIcon}>
-            <Popup>Main Office</Popup>
-          </Marker>
-          <Marker position={officeTwo} icon={customIcon}>
-            <Popup>Office II</Popup>
-          </Marker>
-        </MapContainer>
+        {!office && (
+          <MapContainer center={center} zoom={zoom} scrollWheelZoom={true}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={mainOffice} icon={customIcon}>
+              <Popup>Main Office</Popup>
+            </Marker>
+            <Marker position={officeTwo} icon={customIcon}>
+              <Popup>Office II</Popup>
+            </Marker>
+          </MapContainer>
+        )}
+        {office === "first" && (
+          <MapContainer center={mainOffice} zoom={16} scrollWheelZoom={true}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={mainOffice} icon={customIcon}>
+              <Popup>Main Office</Popup>
+            </Marker>
+            <Marker position={officeTwo} icon={customIcon}>
+              <Popup>Office II</Popup>
+            </Marker>
+          </MapContainer>
+        )}
+        {office === "second" && (
+          <MapContainer center={officeTwo} zoom={16} scrollWheelZoom={true}>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={mainOffice} icon={customIcon}>
+              <Popup>Main Office</Popup>
+            </Marker>
+            <Marker position={officeTwo} icon={customIcon}>
+              <Popup>Office II</Popup>
+            </Marker>
+          </MapContainer>
+        )}
       </div>
     </section>
   );
