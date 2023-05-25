@@ -48,6 +48,17 @@ const AboutPage = () => {
         <div className={classes.leader}>
           <div className={classes.avatar}>
             <img src="/assets/about/desktop/avatar-jake.jpg" alt="jake image" />
+            <div className={classes.socials}>
+              <a href="#" className={classes.linkedin}>
+                <img
+                  src="/assets/icons/icon-linkedin.svg"
+                  alt="linkedin icon"
+                />
+              </a>
+              <a href="#" className={classes.twitter}>
+                <img src="/assets/icons/icon-twitter.svg" alt="twitter icon" />
+              </a>
+            </div>
           </div>
           <h3>Jake Richards</h3>
           <span>Chief Architect</span>
@@ -58,6 +69,17 @@ const AboutPage = () => {
               src="/assets/about/desktop/avatar-thompson.jpg"
               alt="thompson image"
             />
+            <div className={classes.socials}>
+              <a href="#" className={classes.linkedin}>
+                <img
+                  src="/assets/icons/icon-linkedin.svg"
+                  alt="linkedin icon"
+                />
+              </a>
+              <a href="#" className={classes.twitter}>
+                <img src="/assets/icons/icon-twitter.svg" alt="twitter icon" />
+              </a>
+            </div>
           </div>
           <h3>Thompson Smith</h3>
           <span>Head of Finance</span>
@@ -68,6 +90,17 @@ const AboutPage = () => {
               src="/assets/about/desktop/avatar-jackson.jpg"
               alt="jackson image"
             />
+            <div className={classes.socials}>
+              <a href="#" className={classes.linkedin}>
+                <img
+                  src="/assets/icons/icon-linkedin.svg"
+                  alt="linkedin icon"
+                />
+              </a>
+              <a href="#" className={classes.twitter}>
+                <img src="/assets/icons/icon-twitter.svg" alt="twitter icon" />
+              </a>
+            </div>
           </div>
           <h3>Jackson Rourke</h3>
           <span>Lead Designer</span>
@@ -78,6 +111,17 @@ const AboutPage = () => {
               src="/assets/about/desktop/avatar-maria.jpg"
               alt="maria image"
             />
+            <div className={classes.socials}>
+              <a href="#" className={classes.linkedin}>
+                <img
+                  src="/assets/icons/icon-linkedin.svg"
+                  alt="linkedin icon"
+                />
+              </a>
+              <a href="#" className={classes.twitter}>
+                <img src="/assets/icons/icon-twitter.svg" alt="twitter icon" />
+              </a>
+            </div>
           </div>
           <h3>Maria Simpson</h3>
           <span>Senior Architect</span>

@@ -5,13 +5,14 @@
   margin-bottom: 4.5rem;
 }
 
-.one > .paramour {
+.one .hero img {
   width: 100%;
   vertical-align: bottom;
-  filter: brightness(70%);
+  filter: brightness(50%);
+  cursor: pointer;
 }
 
-.paramourGroup {
+.heroGroup {
   width: calc(100% - 4rem);
   position: absolute;
   top: 7.25rem;
@@ -19,7 +20,7 @@
   z-index: 1;
 }
 
-.paramourGroup h2 {
+.heroGroup h2 {
   color: hsl(0, 0%, 100%);
   font-size: 3rem;
   font-weight: 700;
@@ -28,11 +29,27 @@
   margin-bottom: 0.6875rem;
 }
 
-.paramourGroup p {
+.heroGroup p {
   color: hsl(0, 0%, 100%);
   font-size: 1.125rem;
   line-height: 1.5rem;
   margin-bottom: 5.1875rem;
+}
+
+.nextButton {
+  background-color: hsl(0, 0%, 100%);
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  border: none;
+  font: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .button {
@@ -58,15 +75,31 @@
   line-height: 1.5625rem;
 }
 
-.arrow {
+.nextButton .arrow {
+  width: 1.5rem;
+}
+
+.button .arrow {
   width: 1.5rem;
   filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%)
     hue-rotate(118deg) brightness(107%) contrast(110%);
 }
 
+.slides {
+  display: none;
+}
+
+.welcome {
+  display: none;
+}
+
 .two,
 .four {
   margin-inline: 2rem;
+}
+
+.two {
+  margin-bottom: 7.0625rem;
 }
 
 .line {
@@ -94,7 +127,7 @@
 }
 
 .two > :last-child {
-  margin-bottom: 7.0625rem;
+  margin-bottom: 0;
 }
 
 .three {
@@ -104,14 +137,13 @@
   margin-bottom: 4.5625rem;
 }
 
-.three > .smallTeam {
+.three > .smallTeam img {
   width: 100%;
   vertical-align: bottom;
   filter: brightness(70%);
 }
 
 .smallTeamGroup {
-  width: calc(100% - 4rem);
   position: absolute;
   top: calc(50% - 6.25rem);
   left: 2rem;
@@ -127,20 +159,19 @@
   margin-bottom: 1.4375rem;
 }
 
+.four {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4.4375rem 15rem 15rem 15rem 4.5rem;
+  row-gap: 1.5rem;
+}
+
 .four h2 {
   color: var(--very-dark-blue);
   font-size: 3rem;
   font-weight: 700;
   line-height: 3.25rem;
   letter-spacing: -1.71429px;
-  margin-bottom: 2.6875rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15rem 15rem 15rem 4.5rem;
-  row-gap: 1.5rem;
 }
 
 .feat {
@@ -149,7 +180,7 @@
   position: relative;
 }
 
-.feat > img {
+.feat > picture img {
   height: 100%;
   width: 100%;
   filter: brightness(70%);
@@ -180,12 +211,152 @@
   cursor: pointer;
 }
 
-.grid .button {
+.four .button {
   width: 100%;
 }
 
 @media (hover: hover) {
   .button:hover {
     background-color: var(--dark-grey);
+  }
+  .slides button:hover {
+    background-color: var(--very-light-grey);
+  }
+}
+
+@media (min-width: 48rem) {
+  .one {
+    margin-bottom: 5.5625rem;
+  }
+  .heroGroup {
+    width: calc(100% - 7.25rem);
+    top: 11.625rem;
+    left: 3.625rem;
+  }
+  .heroGroup h2 {
+    font-size: 6rem;
+    line-height: 5rem;
+    letter-spacing: -2px;
+    margin-bottom: 0.625rem;
+  }
+  .heroGroup p {
+    margin-bottom: 2.5625rem;
+  }
+  .two,
+  .four {
+    margin-inline: 0rem;
+  }
+  .two {
+    padding-top: 9.9375rem;
+    position: relative;
+    margin-bottom: 14.5625rem;
+  }
+  .welcome {
+    display: block;
+    color: var(--very-light-grey);
+    font-weight: 700;
+    /* font-size: 7.5rem; */
+    font-size: 9.7rem;
+    letter-spacing: -3px;
+    line-height: 12.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .line {
+    display: none;
+  }
+  .two h2 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 2.6875rem;
+  }
+  .three {
+    margin-bottom: 12.5rem;
+  }
+  .smallTeamGroup {
+    top: 10.4375rem;
+    left: 3.625rem;
+  }
+  .smallTeamGroup h2 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 1.7rem;
+  }
+  .four {
+    grid-template-columns: 1fr 10.5625rem;
+    grid-template-rows: 8.3125rem 15rem 15rem 15rem;
+    grid-template-areas:
+      "h2 button"
+      "feat feat"
+      "feat feat"
+      "feat feat";
+    row-gap: 1.5rem;
+  }
+  .four h2 {
+    height: fit-content;
+    margin-top: 0.4375rem;
+    font-size: 4.5rem;
+    line-height: 4rem;
+    letter-spacing: -2px;
+    grid-area: h2;
+  }
+  .feat {
+    grid-column: span 2;
+  }
+  .featGroup {
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+  .four .button {
+    height: 4.5rem;
+    padding: 0;
+    grid-area: button;
+  }
+  .four .button div {
+    height: 100%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .one {
+    margin-bottom: 6.75rem;
+  }
+  .heroGroup {
+    width: 34rem;
+    left: 11.875rem;
+  }
+  .heroGroup p {
+    width: 27.8125rem;
+  }
+  .nextButton {
+    display: none;
+  }
+  .slides {
+    display: block;
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem 5rem;
+    grid-template-rows: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: -5rem;
+    z-index: 1;
+  }
+  .slides button {
+    background-color: hsl(0, 0%, 100%);
+    color: var(--medium-grey);
+    font: inherit;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.56255rem;
+    border: none;
+    cursor: pointer;
+  }
+  .slides .active {
+    background-color: var(--very-dark-blue) !important;
+    color: hsl(0, 0%, 100%);
   }
 }

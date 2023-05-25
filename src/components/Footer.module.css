@@ -1,9 +1,9 @@
 .footer {
-  background-color: var(--very-light-grey);
   position: relative;
 }
 
 .container {
+  background-color: var(--very-light-grey);
   text-align: center;
   padding-top: 5.8125rem;
   padding-bottom: 3rem;
@@ -87,5 +87,36 @@
   }
   .button:hover {
     background-color: var(--dark-grey);
+  }
+}
+
+@media (min-width: 48rem) {
+  /* .footer {
+    max-width: 69.375rem;
+    margin-inline: auto;
+  } */
+  .container {
+    width: calc(100% - 9.75rem);
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .home {
+    position: static;
+  }
+  .group {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3.1875rem;
+    margin-bottom: 0;
+  }
+  .button {
+    position: absolute;
+    right: 0;
+    bottom: calc(50% - 2.25rem);
   }
 }

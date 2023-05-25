@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Map from "../components/Map";
 import classes from "./Contact.module.css";
+import Form from "../components/Form";
 
 const ContactPage = () => {
   const [office, setOffice] = useState<string | undefined>();
@@ -14,6 +15,7 @@ const ContactPage = () => {
       setOffice("second");
     }
   };
+
   return (
     <div className={classes.container}>
       <div className={classes.hero}>
@@ -77,6 +79,7 @@ const ContactPage = () => {
         </a>
       </section>
       <Map office={office} />
+      <Form />
     </div>
   );
 };

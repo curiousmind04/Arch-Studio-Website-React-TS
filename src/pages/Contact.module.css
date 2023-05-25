@@ -114,3 +114,9 @@
 .two > :last-child {
   margin-bottom: 0;
 }
+
+@media (hover: hover) {
+  .button:hover span {
+    text-decoration: underline;
+  }
+}

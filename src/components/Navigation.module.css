@@ -1,9 +1,10 @@
 .header {
   padding: 2rem;
-  /* margin-bottom: 15rem; */
 }
 
 .container {
+  /* max-width: 30rem;
+  margin-inline: auto; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,6 +56,10 @@
   z-index: 5;
 }
 
+.navigation {
+  display: none;
+}
+
 .link,
 .active {
   color: var(--very-dark-blue);
@@ -62,12 +67,76 @@
   line-height: 2.5rem;
 }
 
-.active {
-  color: var(--very-dark-blue);
-}
-
 @media (hover: hover) {
   .link:hover {
     color: var(--very-dark-blue);
+  }
+}
+
+@media (min-width: 48rem) {
+  .header {
+    padding: 3.5rem 0 3.5rem 6.125rem;
+  }
+  .container {
+    /* max-width: auto;
+    margin-inline: 0; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4.875rem;
+  }
+  .logo {
+    width: auto;
+    height: 2.5rem;
+  }
+  .hamburger,
+  .backdrop,
+  .group {
+    display: none;
+  }
+  .navigation {
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.1875rem;
+  }
+  .link,
+  .active {
+    color: var(--medium-grey);
+    text-decoration: none;
+    line-height: 1.5625rem;
+  }
+  .link > div,
+  .active > div {
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 0.375rem;
+  }
+  .active {
+    color: var(--very-dark-blue);
+  }
+  .line {
+    background-color: transparent;
+    height: 1px;
+    width: 40%;
+    margin-right: 1rem;
+  }
+  .active .line {
+    background-color: var(--very-dark-blue);
+  }
+}
+
+@media (min-width: 80rem) {
+  .header {
+    padding: 3.5rem 0 3.5rem 0;
+  }
+  .container {
+    gap: 5.9375rem;
   }
 }

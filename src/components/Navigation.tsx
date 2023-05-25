@@ -35,7 +35,6 @@ const MainNav = () => {
             >
               <div>
                 <div>Portfolio</div>
-                <div></div>
               </div>
             </NavLink>
             <NavLink
@@ -47,7 +46,6 @@ const MainNav = () => {
             >
               <div>
                 <div>About Us</div>
-                <div></div>
               </div>
             </NavLink>
             <NavLink
@@ -59,11 +57,48 @@ const MainNav = () => {
             >
               <div>
                 <div>Contact</div>
-                <div></div>
               </div>
             </NavLink>
           </div>
         )}
+        <div className={classes.navigation}>
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) =>
+              isActive ? classes.active : classes.link
+            }
+            onClick={closeMenu}
+          >
+            <div>
+              <div>Portfolio</div>
+              <div className={classes.line}></div>
+            </div>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? classes.active : classes.link
+            }
+            onClick={closeMenu}
+          >
+            <div>
+              <div>About Us</div>
+              <div className={classes.line}></div>
+            </div>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? classes.active : classes.link
+            }
+            onClick={closeMenu}
+          >
+            <div>
+              <div>Contact</div>
+              <div className={classes.line}></div>
+            </div>
+          </NavLink>
+        </div>
         <h1 className="sr-only">Arch Studio Website</h1>
       </div>
     </header>
