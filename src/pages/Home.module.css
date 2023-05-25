@@ -48,7 +48,7 @@
   position: absolute;
   left: 2rem;
   top: 2rem;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -90,6 +90,10 @@
 }
 
 .welcome {
+  display: none;
+}
+
+.welcomeImage {
   display: none;
 }
 
@@ -224,6 +228,55 @@
   }
 }
 
+@media (max-width: 22.5rem) {
+  .nextButton {
+    border: 1px solid var(--very-dark-blue);
+    top: calc(100% + 1rem);
+    left: calc(50% - 28px);
+  }
+  .heroGroup {
+    top: 4.5rem;
+    left: 1rem;
+  }
+  .one .button {
+    display: none;
+  }
+  .two {
+    margin-inline: 1rem;
+  }
+  .smallTeamGroup {
+    left: 1rem;
+  }
+  .four {
+    margin-inline: 0;
+  }
+  .four h2 {
+    margin-inline: auto;
+  }
+  .featGroup {
+    left: 1rem;
+  }
+  .four .button {
+    width: calc(100% - 2rem);
+    margin-inline: 1rem;
+  }
+}
+
+@media (max-width: 18rem) {
+  .heroGroup {
+    width: calc(100% - 2rem);
+    top: 2rem;
+  }
+  .heroGroup h2 {
+    line-height: 2.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .heroGroup p {
+    line-height: 1.125rem;
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: 48rem) {
   .one {
     margin-bottom: 5.5625rem;
@@ -255,7 +308,6 @@
     display: block;
     color: var(--very-light-grey);
     font-weight: 700;
-    /* font-size: 7.5rem; */
     font-size: 9.7rem;
     letter-spacing: -3px;
     line-height: 12.5rem;
@@ -358,5 +410,47 @@
   .slides .active {
     background-color: var(--very-dark-blue) !important;
     color: hsl(0, 0%, 100%);
+  }
+  .two {
+    padding-top: 10.0625rem;
+    padding-left: 11.8125rem;
+    margin-bottom: 13.1875rem;
+  }
+  .welcome {
+    font-size: 15.625rem;
+    letter-spacing: -5px;
+  }
+  .two p {
+    width: 27.8125rem;
+  }
+  .welcomeImage {
+    display: block;
+    width: 21.875rem;
+    position: absolute;
+    bottom: -0.6875rem;
+    right: 0;
+    z-index: -2;
+  }
+  .smallTeamGroup {
+    left: 11.875rem;
+  }
+  .four {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 8.5rem auto;
+    grid-template-areas:
+      "h2 . button"
+      "feat feat feat"
+      "feat feat feat"
+      "feat feat feat";
+    row-gap: 0;
+    column-gap: 1.875rem;
+  }
+  .feat {
+    grid-area: feat;
+    grid-column: span 1;
+  }
+  .four .button {
+    width: 10.5625rem;
+    justify-self: flex-end;
   }
 }

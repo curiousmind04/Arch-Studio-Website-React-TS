@@ -90,11 +90,16 @@
   }
 }
 
+@media (max-width: 22.5rem) {
+  .button {
+    padding: 1rem;
+  }
+  .button > div {
+    gap: 1rem;
+  }
+}
+
 @media (min-width: 48rem) {
-  /* .footer {
-    max-width: 69.375rem;
-    margin-inline: auto;
-  } */
   .container {
     width: calc(100% - 9.75rem);
     text-align: center;
@@ -118,5 +123,16 @@
     position: absolute;
     right: 0;
     bottom: calc(50% - 2.25rem);
+  }
+}
+
+@media (min-width: 80rem) {
+  .container {
+    width: calc(100% - 7.875rem);
+    gap: 5.3125rem;
+  }
+  .home {
+    width: 12.5rem;
+    height: 12.5rem;
   }
 }

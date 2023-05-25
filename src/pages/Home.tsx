@@ -182,6 +182,11 @@ const HomePage = () => {
       <section className={classes.two}>
         <span className={classes.welcome}>Welcome</span>
         <div className={classes.line}></div>
+        <img
+          src="/assets/home/desktop/image-welcome.jpg"
+          alt="welcome image"
+          className={classes.welcomeImage}
+        />
         <h2>
           Welcome to
           <br />
@@ -207,6 +212,10 @@ const HomePage = () => {
       </section>
       <section className={classes.three}>
         <picture className={classes.smallTeam}>
+          <source
+            media="(min-width: 80rem)"
+            srcSet="/assets/home/desktop/image-small-team.jpg"
+          />
           <source
             media="(min-width: 48rem)"
             srcSet="/assets/home/tablet/image-small-team.jpg"
@@ -239,6 +248,10 @@ const HomePage = () => {
         <div className={classes.feat}>
           <picture>
             <source
+              media="(min-width: 80rem)"
+              srcSet="/assets/portfolio/desktop/image-del-sol.jpg"
+            />
+            <source
               media="(min-width: 48rem)"
               srcSet="/assets/portfolio/tablet/image-del-sol.jpg"
             />
@@ -257,6 +270,10 @@ const HomePage = () => {
         <div className={classes.feat}>
           <picture>
             <source
+              media="(min-width: 80rem)"
+              srcSet="/assets/portfolio/desktop/image-228b.jpg"
+            />
+            <source
               media="(min-width: 48rem)"
               srcSet="/assets/portfolio/tablet/image-228b.jpg"
             />
@@ -274,6 +291,10 @@ const HomePage = () => {
         </div>
         <div className={classes.feat}>
           <picture>
+            <source
+              media="(min-width: 80rem)"
+              srcSet="/assets/portfolio/desktop/image-prototype.jpg"
+            />
             <source
               media="(min-width: 48rem)"
               srcSet="/assets/portfolio/tablet/image-prototype.jpg"
