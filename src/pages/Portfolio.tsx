@@ -1,249 +1,106 @@
 import classes from "./Portfolio.module.css";
 
+const portfolioData = [
+  {
+    title: "Seraph Station",
+    date: "September 2019",
+    image: "seraph",
+    alt: "seraph station image",
+  },
+  {
+    title: "EEbox Building",
+    date: "August 2017",
+    image: "eebox",
+    alt: "eebox building image",
+  },
+  {
+    title: "Federal II Tower",
+    date: "March 2017",
+    image: "federal",
+    alt: "federal II tower image",
+  },
+  {
+    title: "Project Del Sol",
+    date: "January 2016",
+    image: "del-sol",
+    alt: "project del sol image",
+  },
+  {
+    title: "Le Prototype",
+    date: "October 2015",
+    image: "prototype",
+    alt: "le prototype image",
+  },
+  {
+    title: "228B Tower",
+    date: "April 2015",
+    image: "228b",
+    alt: "228b tower image",
+  },
+  {
+    title: "Grand Edelweiss Hotel",
+    date: "December 2013",
+    image: "edelweiss",
+    alt: "grand edelweiss hotel image",
+  },
+  {
+    title: "Netcry Tower",
+    date: "August 2012",
+    image: "netcry",
+    alt: "netcry tower image",
+  },
+  {
+    title: "Hypers",
+    date: "January 2012",
+    image: "hypers",
+    alt: "hypers image",
+  },
+  {
+    title: "SXIV Tower",
+    date: "March 2011",
+    image: "sxiv",
+    alt: "sxiv tower image",
+  },
+  {
+    title: "Trinity Bank Tower",
+    date: "September 2010",
+    image: "trinity",
+    alt: "trinity bank tower image",
+  },
+  {
+    title: "Project Paramour",
+    date: "February 2008",
+    image: "paramour",
+    alt: "project paramour image",
+  },
+];
+
 const PortfolioPage = () => {
   return (
     <div className={classes.container}>
       <div className={classes.grid}>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-seraph.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-seraph.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-seraph.jpg"
-              alt="seraph station image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Seraph Station</h3>
-            <span>September 2019</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-eebox.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-eebox.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-eebox.jpg"
-              alt="eebox building image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Eebox Building</h3>
-            <span>August 2017</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-federal.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-federal.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-federal.jpg"
-              alt="federal II tower image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Federal II Tower</h3>
-            <span>March 2017</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-del-sol.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-del-sol.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-del-sol.jpg"
-              alt="project del sol image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Project Del Sol</h3>
-            <span>January 2016</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-prototype.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-prototype.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-prototype.jpg"
-              alt="le prototype image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Le Prototype</h3>
-            <span>October 2015</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-228b.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-228b.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-228b.jpg"
-              alt="228b tower image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>228B Tower</h3>
-            <span>April 2015</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-edelweiss.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-edelweiss.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-edelweiss.jpg"
-              alt="grand edelweiss hotel image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Grand Edelweiss Hotel</h3>
-            <span>December 2013</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-netcry.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-netcry.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-netcry.jpg"
-              alt="netcry tower image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Netcry Tower</h3>
-            <span>August 2012</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-hypers.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-hypers.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-hypers.jpg"
-              alt="hypers image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Hypers</h3>
-            <span>January 2012</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-sxiv.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-sxiv.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-sxiv.jpg"
-              alt="sxiv tower image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>SXIV Tower</h3>
-            <span>March 2011</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-trinity.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-trinity.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-trinity.jpg"
-              alt="trinity bank tower image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Trinity Bank Tower</h3>
-            <span>September 2010</span>
-          </div>
-        </a>
-        <a href="#" className={classes.item}>
-          <picture>
-            <source
-              media="(min-width: 80rem)"
-              srcSet="/assets/portfolio/desktop/image-paramour.jpg"
-            />
-            <source
-              media="(min-width: 48rem)"
-              srcSet="/assets/portfolio/tablet/image-paramour.jpg"
-            />
-            <img
-              src="/assets/portfolio/mobile/image-paramour.jpg"
-              alt="project paramour image"
-            />
-          </picture>
-          <div className={classes.itemGroup}>
-            <h3>Project Paramour</h3>
-            <span>February 2008</span>
-          </div>
-        </a>
+        {portfolioData.map((project) => (
+          <a href="#" className={classes.item} key={project.title}>
+            <picture>
+              <source
+                media="(min-width: 80rem)"
+                srcSet={`/assets/portfolio/desktop/image-${project.image}.jpg`}
+              />
+              <source
+                media="(min-width: 48rem)"
+                srcSet={`/assets/portfolio/tablet/image-${project.image}.jpg`}
+              />
+              <img
+                src={`/assets/portfolio/mobile/image-${project.image}.jpg`}
+                alt={project.alt}
+              />
+            </picture>
+            <div className={classes.itemGroup}>
+              <h3>{project.title}</h3>
+              <span>{project.date}</span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   );
