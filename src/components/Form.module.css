@@ -27,6 +27,7 @@
   padding-bottom: 1.3125rem;
   padding-left: 2.125rem;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid var(--very-dark-blue);
   outline: none;
   cursor: pointer;
@@ -50,6 +51,7 @@
   padding-left: 2.125rem;
   resize: none;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid var(--very-dark-blue);
   outline: none;
   cursor: pointer;
