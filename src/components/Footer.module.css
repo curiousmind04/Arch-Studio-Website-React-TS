@@ -135,4 +135,7 @@
     width: 12.5rem;
     height: 12.5rem;
   }
+  .home > img {
+    width: 6rem;
+  }
 }

@@ -266,6 +266,7 @@ const HomePage = () => {
               View All Projects
             </NavLink>
           </div>
+          <span className={classes.num}>1</span>
         </div>
         <div className={classes.feat}>
           <picture>
@@ -283,11 +284,12 @@ const HomePage = () => {
             />
           </picture>
           <div className={classes.featGroup}>
-            <h3>228b Tower</h3>
+            <h3>228B Tower</h3>
             <NavLink to="/portfolio" className={classes.featGroupButton}>
               View All Projects
             </NavLink>
           </div>
+          <span className={classes.num}>2</span>
         </div>
         <div className={classes.feat}>
           <picture>
@@ -310,6 +312,7 @@ const HomePage = () => {
               View All Projects
             </NavLink>
           </div>
+          <span className={classes.num}>3</span>
         </div>
         <NavLink to="/portfolio" className={classes.button}>
           <div>

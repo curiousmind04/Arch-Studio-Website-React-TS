@@ -215,6 +215,10 @@
   cursor: pointer;
 }
 
+.num {
+  display: none;
+}
+
 .four .button {
   width: 100%;
 }
@@ -362,6 +366,19 @@
   .featGroup {
     bottom: 2.5rem;
     left: 2.5rem;
+  }
+  .num {
+    display: block;
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+    font-size: 15.625rem;
+    font-weight: 700;
+    line-height: 12.5rem;
+    letter-spacing: -5px;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 1;
   }
   .four .button {
     height: 4.5rem;
