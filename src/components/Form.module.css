@@ -19,6 +19,7 @@
 
 .name input,
 .email input {
+  background-color: transparent;
   color: var(--very-dark-blue);
   width: 100%;
   font: inherit;
@@ -43,6 +44,7 @@
 }
 
 .message textarea {
+  background-color: transparent;
   color: var(--very-dark-blue);
   width: 100%;
   font: inherit;
