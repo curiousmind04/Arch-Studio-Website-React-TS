@@ -10,7 +10,7 @@ type Props = {
 
 const Map: React.FC<Props> = ({ office }) => {
   const center: LatLngExpression = [42.53199034588999, -77.01132639826639];
-  const zoom = 6;
+  const zoom = 5;
 
   // for mainOffice and officeTwo I used the
   // Eaton Center and the Empire State Building

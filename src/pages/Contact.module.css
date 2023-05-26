@@ -1,3 +1,9 @@
+.container {
+  /* max-width: 26rem;
+  margin-inline: auto; */
+  position: relative;
+}
+
 .hero {
   width: 100%;
   height: 15rem;
@@ -9,6 +15,7 @@
   height: 100%;
   width: 100%;
   vertical-align: bottom;
+  filter: brightness(60%);
 }
 
 .white {
@@ -40,6 +47,14 @@
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.5rem;
+}
+
+.contact {
+  display: none;
+}
+
+.lineTwo {
+  display: none;
 }
 
 .two {
@@ -111,12 +126,152 @@
   width: 1.5rem;
 }
 
-.two > :last-child {
+/* .two > :last-child {
   margin-bottom: 0;
-}
+} */
 
 @media (hover: hover) {
   .button:hover span {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .one {
+    padding-inline: 1rem;
+  }
+  .white {
+    height: 1.5rem;
+    width: calc(100% - 1rem);
+  }
+  .container h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -1px;
+  }
+  .two {
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    height: 45rem;
+    margin-bottom: 12.5rem;
+  }
+  .white {
+    display: none;
+  }
+  .contact {
+    display: block;
+    color: var(--very-light-grey);
+    font-size: 9.5rem;
+    font-weight: 700;
+    line-height: 12.5rem;
+    letter-spacing: -3px;
+    position: absolute;
+    top: 12.75rem;
+    right: 0;
+    z-index: 2;
+  }
+  .one {
+    background-color: hsl(0, 0%, 100%);
+    width: 32.1875rem;
+    padding-top: 5.5rem;
+    padding-left: 3.6875rem;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    position: absolute;
+    top: 18.0625rem;
+    right: 0;
+    z-index: 1;
+  }
+  .lineTwo {
+    display: block;
+    background-color: var(--light-grey);
+    width: 4.0625rem;
+    height: 1px;
+    margin-bottom: 4.5625rem;
+  }
+  .one h2 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 2.375rem;
+  }
+  .two {
+    padding-inline: 0;
+    margin-bottom: 14.125rem;
+  }
+  .line {
+    margin-bottom: 3.0625rem;
+  }
+  .two h2 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 2.625rem;
+  }
+  .group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.6875rem;
+  }
+  .office {
+    margin-bottom: 0;
+  }
+  .button {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .hero {
+    width: fit-content;
+    margin-bottom: 17.125rem;
+  }
+  .contact {
+    font-size: 15.625rem;
+    letter-spacing: -5px;
+    top: 8.125rem;
+    right: 0;
+  }
+  .one {
+    width: 39.25rem;
+    padding-top: 10rem;
+    padding-left: 11.375rem;
+    top: 13.5625rem;
+  }
+  .lineTwo {
+    margin-bottom: 4.5625rem;
+  }
+  .one h2 {
+    margin-bottom: 2.3125rem;
+  }
+  .two {
+    margin-bottom: 12.5rem;
+  }
+  .line {
+    margin-bottom: 4.5625rem;
+  }
+  .flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.875rem;
+  }
+  .two h2 {
+    width: 21.875rem;
+    margin-bottom: 0;
+  }
+  .group {
+    width: 21.875rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3.6875rem;
+    margin-bottom: 0;
   }
 }

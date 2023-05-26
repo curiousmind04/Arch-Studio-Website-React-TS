@@ -64,6 +64,9 @@ main {
     padding-right: 6.125rem;
     padding-bottom: 12.5rem;
   }
+  .leaflet-container {
+    height: 35rem;
+  }
 }
 
 @media (min-width: 80rem) {

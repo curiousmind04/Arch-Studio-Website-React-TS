@@ -95,11 +95,7 @@ const Form = () => {
   return (
     <>
       <section className={classes.connect}>
-        <h2>
-          Connect
-          <br />
-          with us
-        </h2>
+        <h2>Connect with us</h2>
         <form noValidate onSubmit={submitHandler}>
           <div className={classes.name}>
             <label htmlFor="name" className="sr-only">

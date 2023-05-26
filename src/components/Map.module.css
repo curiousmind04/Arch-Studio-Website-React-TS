@@ -8,3 +8,18 @@
   height: 22.9375rem;
   width: 100%;
 }
+
+@media (min-width: 48rem) {
+  .map {
+    height: 35rem;
+  }
+  .mapComponent {
+    margin-bottom: 12.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .mapComponent {
+    margin-bottom: 9.9375rem;
+  }
+}
